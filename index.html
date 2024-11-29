@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Registros</title>
+  <!-- Link para o Bootstrap -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Link para o CSS customizado -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="text-center mb-4">Cadastro de Registros</h2>
+    <div class="card">
+      <div class="card-header">
+        Novo Registro
+      </div>
+      <div class="card-body">
+        <form id="formCadastro">
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" class="form-control" id="nome" placeholder="Digite o nome" required>
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" class="form-control" id="email" placeholder="Digite o e-mail" required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="card mt-4">
+      <div class="card-header">
+        Registros Cadastrados
+      </div>
+      <div class="card-body">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>E-mail</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="listaRegistros">
+            <!-- Os registros vão aparecer aqui -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script para Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Script para manipulação do LocalStorage -->
+  <script src="script.js"></script>
+</body>
+
+</html>
